@@ -1,10 +1,13 @@
-#include <stdio.h>
-#include <stdlib.h>
-#include <string.h>
+#pragma once
+#include<stdio.h>
+#include<stdlib.h>
+#include<string.h>
+#include<conio.h>
 
-struct node
-{
-	int value;
-	struct node *next;
-};
-typedef struct node node;
+
+ struct node
+ {
+	 int value;
+struct node *next;
+ };
+ typedef struct node node;
