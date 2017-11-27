@@ -50,4 +50,32 @@ Function Descriptions
  Team's Ideas of Implementations
   * 정순출력, 역순출력의 함수를 재귀함수을 이용해 출력
   * 기본이 되는 deletenode, printvalue 함수를 사용하여 다른 함수를 만듬
-  * main 파일에서 printvalue와 delodd, deleven을 사용 시 while 반복문으로 오류 검출
+
+
+
+Main Function
+
+- function.c를 사용하기 위한 연결 리스트의 head를 정의 및 동적 할당
+
+- 입력받은 자료 값을 appendnode()를 통해 연결 리스트에 추가, 이 과정에서 while() 반복문 이용하여
+  Ctrl-Z가 입력될 때까지 계속 입력 가능
+
+- countnode() 함수를 통해 자료들의 개수를 출력
+
+- printorder() 함수를 통해 연결 리스트의 노드들을 입력 순으로 출력
+
+- printreverse() 함수를 통해 연결 리스트의 노드들을 입력 역순으로 출력
+
+- printmid() 함수를 통해 연결 리스트 중간에 있는 노드의 저장 값을 출력
+
+- printvalue() 함수를 통해 연결 리스트에서 원하는 순서의 노드의 저장 값을 확인할 수 있고
+  while() 반복문을 통해 Ctrl-Z가 입력될 때까지 계속 확인 가능
+
+- printvalue()를 통해 특정 순서의 노드 저장 값을 확인하는 도중 특정 순서가 입력된
+  노드 개수의 범위를 벗어날 시 오류 검출 및 재입력 요청
+
+- delodd()와 deleven()을 통해서 홀수 번째 또는 짝수 번째의 노드들을 제거한 후 출력
+  이 과정에서 switch() 함수를 통해 둘 중 하나를 선택하도록 구현
+
+- 홀수 번째 또는 짝수 번째 노드들을 제거하는 과정에서 주어진 선택지를 벗어날 시
+  오류 검출 및 재입력 요청하도록 do-while() 반복문을 사용
