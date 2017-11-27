@@ -7,3 +7,21 @@ This text file describes brief but precise and complete specification of project
 
 - - -
 Your description start form next line and do not delete lines upto this point.
+
+File Ownership List
+
+ * README File - 박상우
+ * Header File - 이지윤
+ * Function File - 최동우 김다빈
+ * Main File - 오준석
+
+Function Descriptions
+
+ *Funcname1
+  -
+ *Funcname2
+  -
+ *Funcname3
+  -
+
+
