@@ -12,9 +12,9 @@ void deleven(node *head, int count);
 
 int main(void) 
 {
-	int a;
+	int number;
 	int crt = 0;
-	int n;
+	int value;
 	node *head = NULL;
 	head = (node *)malloc(sizeof(node));
 	while (!fflush(stdin))
@@ -25,37 +25,42 @@ int main(void)
 			printf("Create %dnd node (Ctrl + Z to terminate) >> ", crt + 1);
 		else
 			printf("Create %dth node (Ctrl + Z to terminate) >> ", crt + 1);
-		scanf("%d", &n);
+		scanf("%d", &value);
 		if (feof(stdin))
 			break;
-		appendnode(head, crt++, n);
+		appendnode(head, crt++, value);
 	}
 	printf("\n"); 
-	printf("자료 개수 >> ");
+	printf("자료들의 개수 >> ");
 	printf("%d", countnode(head));
 	printf("\n\n");
-	printf("정순 출력 >> ");
+	printf("정순으로 출력 >> ");
 	printorder(head);
 	printf("\n\n");
-	printf("역순 출력 >> ");
+	printf("역순으로 출력 >> ");
 	printreverse(head);
 	printf("\n\n");
-	printf("중간값 출력 >> ");
+	printf("중간값을 출력 >> ");
 	printmid(head, countnode(head));
 	printf("\n\n");
-	printf("1번(홀수번째 삭제), 2번(짝수번째 삭제) : ");
-	scanf("%d", &a);
-	printf("\n"); 
-	if(a==1)
+	do
 	{
-		printf("홀수번째 삭제 후 출력 >> ");
-		delodd(head, countnode(head));
-	}
-	else if(a==2)
-	{
-		printf("짝수번째 삭제 후 출력 >> ");
-		deleven(head, countnode(head));
-	}
-	printf("\n");
+		printf("1번(홀수번째 삭제), 2번(짝수번째 삭제) : ");
+		scanf("%d", &number);
+		printf("\n"); 
+		if(number==1)
+		{
+			printf("홀수번째 삭제 후 출력 >> ");
+			delodd(head, countnode(head));
+		}
+		else if(number==2)
+		{
+			printf("짝수번째 삭제 후 출력 >> ");
+			deleven(head, countnode(head));
+		}
+		else printf("Error, Please re-enter.");
+		printf("\n\n");
+	}while(number != 1 && number != 2);
+	
 	return 0;
 }
