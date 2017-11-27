@@ -45,7 +45,7 @@ int main(void)
 	printf("\n\n");
 	while (!fflush(stdin))
 	{
-		printf("원하는 순서의 노드 저장 값 (Ctrl + Z는 종료) >> ");
+		printf("원하는 차례의 노드 저장 값 (Ctrl + Z는 종료) >> ");
 		scanf("%d", &number);
 		printf("\n");
 		if (feof(stdin)) break;
@@ -60,18 +60,19 @@ int main(void)
 		printf("1번(홀수번째 삭제), 2번(짝수번째 삭제) >> ");
 		scanf("%d", &number);
 		printf("\n"); 
-		if(number==1)
+		switch(number)
 		{
-			printf("홀수번째 삭제 후 출력 >> ");
-			delodd(head, countnode(head));
+			case 1 :
+				printf("홀수번째 삭제 후 출력 >> ");
+				delodd(head, countnode(head));
+				break;
+			case 2 :
+				printf("짝수번째 삭제 후 출력 >> ");
+				deleven(head, countnode(head));
+				break;
+			default :
+				printf("잘못된 값, 재 입력 필요\n");
 		}
-		else if(number==2)
-		{
-			printf("짝수번째 삭제 후 출력 >> ");
-			deleven(head, countnode(head));
-		}
-		else
-			printf("잘못된 값, 재 입력 필요\n");
 		printf("\n"); 
 	}while(number != 1 && number != 2);
 
