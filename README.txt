@@ -12,7 +12,7 @@ File Ownership List
 
  * README File - 박상우
  * Header File - 이지윤
- * Function File - 최동우 김다빈
+ * Function File - 김다빈 최동우
  * Main File - 오준석
 
 Function Descriptions
