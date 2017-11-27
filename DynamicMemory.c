@@ -125,7 +125,7 @@ int main()
 	LINK* head = NULL;
 	LINK* cur;
 	
-	printf("Á¤¼ö°ªÀ» ÀÔ·ÂÇØÁÖ¼¼¿ä. (Ctrl-Z´Â Á¾·á) : ");
+	printf("ì •ìˆ˜ê°’ì„ ì…ë ¥í•´ì£¼ì„¸ìš”. (Ctrl-ZëŠ” ì¢…ë£Œ) : ");
 	while (scanf("%d", &number) != NULL)
 	{
 		cur = createNode(number);
@@ -139,24 +139,24 @@ int main()
 	printf("\n");
 	
 	int i = numberof(head);
-	printf("ÀÔ·ÂÇÑ ÀÚ·áÀÇ °³¼ö : %d", i);
+	printf("ì…ë ¥í•œ ìë£Œì˜ ê°œìˆ˜ : %d", i);
 	printf("\n\n"); 
 	
-	printf("ÀÔ·Â ÀÚ·á¸¦ ÀÔ·Â ¿ª¼øÀ¸·Î Ãâ·Â : ");
+	printf("ì…ë ¥ ìë£Œë¥¼ ì…ë ¥ ì—­ìˆœìœ¼ë¡œ ì¶œë ¥ : ");
 	head = invert(head);
 	printlist(head);
 	head = invert(head);
 	printf("\n\n");
 	
-	printf("ÀÔ·Â ÀÚ·áÀÇ Áß°£ À§Ä¡¿¡ ÀÖ´Â °ª : ");
+	printf("ì…ë ¥ ìë£Œì˜ ì¤‘ê°„ ìœ„ì¹˜ì— ìˆëŠ” ê°’ : ");
 	middle(head, i);
 	printf("\n\n");
 	
-	printf("ÀÔ·Â ÀÚ·á¸¦ ÀÔ·Â ¼øÀ¸·Î Ãâ·Â : ");
+	printf("ì…ë ¥ ìë£Œë¥¼ ì…ë ¥ ìˆœìœ¼ë¡œ ì¶œë ¥ : ");
 	printlist(head);
 	printf("\n\n");
 	
-	printf("ÀÔ·Â ÀÚ·á¿¡¼­ È¦¼ö ¹øÂ° ÀÚ·á¸¦ »èÁ¦ : ");
+	printf("ì…ë ¥ ìë£Œì—ì„œ í™€ìˆ˜ ë²ˆì§¸ ìë£Œë¥¼ ì‚­ì œ : ");
 	head = odddelete(head);
 	printlist(head);
 	printf("\n");
