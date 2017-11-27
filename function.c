@@ -1,13 +1,16 @@
 #include "header.h"
 
-void appendnode(node *head, int value)
+void appendnode(node *head, int position, int value)
 {
-	node *newnode = NULL;
+	node *newnode;
 	newnode = (node *)malloc(sizeof(node));
-	newnode->value = value;
-	while (head->next == NULL)
-		head = head->next;
-	head->next = newnode;
+	newnode->next = NULL;
+	node *crtnode = head;
+	for (int i = 0; i < position; i++)
+		crtnode = crtnode->next;
+	crtnode->next = newnode;
+	crtnode->next->value = value;
+
 }
 void deletenode(node *head, int n)
 {
@@ -27,69 +30,55 @@ int printvalue(node *head, int n)
 }
 int countnode(node *head)
 {
-	int i;
-	for (i = 1; head->next != NULL; i++)
+	int i = 0;
+	while (head->next != NULL)
+	{
 		head = head->next;
+		i++;
+	}
 	return i;
 }
 void printorder(node *head)
 {
+	head = head->next;
 	if (head != NULL)
 	{
 		printf("%d ", head->value);
-		printorder(head->next);
+		printorder(head);
 	}
 }
 void printreverse(node *head)
 {
-	if (head != NULL)
+	if (head->next != NULL)
 	{
 		printreverse(head->next);
-		printf("%d ", head->value);
+		printf("%d ", head->next->value);
 	}
 }
-void printmid(node *head, int crt)
+void printmid(node *head, int count)
 {
-	int temp;
-	if (crt % 2 == 0)
-	{
-		temp = crt / 2;
-		for (int i = 1; i < temp; i++)
-			head = head->next;
-		printf("%d %d", head->value, head->next->value);
-	}
+	if (count % 2)
+		printf("%d", printvalue(head, (count / 2) + 1));
 	else
-	{
-		temp = (crt - 1) / 2;
-		for (int i = 0; i < temp; i++)
-			head = head->next;
-		printf("%d", head->value);
-	}
+		printf("%d %d", printvalue(head, count / 2), printvalue(head, (count / 2) + 1));
 }
 void delodd(node *head, int count)
 {
-	node *del = head;
-	head = head->next;
-	printf("%d ", head->value);
-	free(del);
-	for (int i = 0; i < (int)(count / 2) - 1; i++)
+	if (count > 1)
 	{
-		del = head->next;
-		head = head->next->next;
-		printf("%d ", head->value);
-		free(del);
+		for (int i = 0; i < (count + 1) / 2 ; i++)
+			deletenode(head, i + 1);
 	}
+	printorder(head);
 }
 void deleven(node *head, int count)
 {
-	node *del = head->next;
-	printf("%d ", head->value);
-	free(del);
-	for (int i = 0; i < (int)(count / 2); i++)
+	if (count > 1)
 	{
-		del = head->next;
-		head = head->next->next;
-		printf("%d ", head->value);
-		free(del);
+		for (int i = 0; i < (count / 2); i++)
+			deletenode(head, i + 2);
 	}
+	else
+		;
+	printorder(head);
 }
