@@ -49,7 +49,6 @@ int main(void)
 		{
 			printf("홀수번째 삭제 후 출력 >> ");
 			delodd(head, countnode(head));
-			 
 		}
 		else if(number==2)
 		{
