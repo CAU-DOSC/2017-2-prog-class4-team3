@@ -44,10 +44,10 @@ Function Descriptions
   - 노드의 총 개수인 count를 인자로 받아 count가 짝수면 중간값 2개를, 홀수면 1개를 출력하는 함수
  * void delodd(node *head, int count)
   - 홀수번째(1, 3, 5, 7 ...)에 있는 노드들을 삭제하는 함수
-* void deleven(node *head, int count)
+ * void deleven(node *head, int count)
   - 짝수번째(2, 4, 6, 8 ...)에 있는 노드들을 삭제하는 함수
 
  Team's Ideas of Implementations
   * 정순출력, 역순출력의 함수를 재귀함수을 이용해 출력
   * 기본이 되는 deletenode, printvalue 함수를 사용하여 다른 함수를 만듬
-  `
+  * main 파일에서 printvalue와 delodd, deleven을 사용 시 while 반복문으로 오류 검출
