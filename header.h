@@ -5,10 +5,9 @@
 #include<conio.h>
 #include<malloc.h>
 
-
  struct node
  {
-	 int value;
-struct node *next;
+	int value;
+	struct node *next;
  };
  typedef struct node node;
