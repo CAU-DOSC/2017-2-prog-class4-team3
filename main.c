@@ -1,5 +1,15 @@
 #include "header.h"
 
+void appendnode(node *head, int position, int value);
+void deletenode(node *head, int n);
+int printvalue(node *head, int n);
+int countnode(node *head);
+void printorder(node *head);
+void printreverse(node *head);
+void printmid(node *head, int count);
+void delodd(node *head, int count);
+void deleven(node *head, int count);
+
 int main(void) 
 {
 	int a;
@@ -20,25 +30,32 @@ int main(void)
 			break;
 		appendnode(head, crt++, n);
 	}
-	printf("ÀÚ·á °³¼ö >> ");
+	printf("\n"); 
+	printf("ìë£Œ ê°œìˆ˜ >> ");
 	printf("%d", countnode(head));
-	puts("");
-	printf("Á¤¼ø Ãâ·Â >> ");
+	printf("\n\n");
+	printf("ì •ìˆœ ì¶œë ¥ >> ");
 	printorder(head);
-	puts("");
-	printf("¿ª¼ø Ãâ·Â >> ");
+	printf("\n\n");
+	printf("ì—­ìˆœ ì¶œë ¥ >> ");
 	printreverse(head);
-	puts("");
-	printf("Áß°£°ª Ãâ·Â >> ");
+	printf("\n\n");
+	printf("ì¤‘ê°„ê°’ ì¶œë ¥ >> ");
 	printmid(head, countnode(head));
-	puts("");
-	printf("1 : È¦¼ö¹øÂ° »èÁ¦, 2 : Â¦¼ö¹øÂ° »èÁ¦\n");
+	printf("\n\n");
+	printf("1ë²ˆ(í™€ìˆ˜ë²ˆì§¸ ì‚­ì œ), 2ë²ˆ(ì§ìˆ˜ë²ˆì§¸ ì‚­ì œ) : ");
 	scanf("%d", &a);
-	printf("È¦¼ö¹øÂ° »èÁ¦ ÈÄ Ãâ·Â >> ");
+	printf("\n"); 
 	if(a==1)
+	{
+		printf("í™€ìˆ˜ë²ˆì§¸ ì‚­ì œ í›„ ì¶œë ¥ >> ");
 		delodd(head, countnode(head));
+	}
 	else if(a==2)
+	{
+		printf("ì§ìˆ˜ë²ˆì§¸ ì‚­ì œ í›„ ì¶œë ¥ >> ");
 		deleven(head, countnode(head));
-	puts("");
+	}
+	printf("\n");
 	return 0;
 }
