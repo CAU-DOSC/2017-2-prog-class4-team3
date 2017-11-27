@@ -10,7 +10,6 @@ void appendnode(node *head, int position, int value)
 		crtnode = crtnode->next;
 	crtnode->next = newnode;
 	crtnode->next->value = value;
-
 }
 void deletenode(node *head, int n)
 {
