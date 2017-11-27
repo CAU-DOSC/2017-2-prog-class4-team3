@@ -19,12 +19,9 @@ int main(void)
 	head = (node *)malloc(sizeof(node));
 	while (!fflush(stdin))
 	{
-		if (crt == 0)
-			printf("Create %dst node (Ctrl + Z to terminate) >> ", crt + 1);
-		else if (crt == 1)
-			printf("Create %dnd node (Ctrl + Z to terminate) >> ", crt + 1);
-		else
-			printf("Create %dth node (Ctrl + Z to terminate) >> ", crt + 1);
+		if (crt == 0) printf("Create %dst node (Ctrl + Z to terminate) >> ", crt + 1);
+		else if (crt == 1) printf("Create %dnd node (Ctrl + Z to terminate) >> ", crt + 1);
+		else printf("Create %dth node (Ctrl + Z to terminate) >> ", crt + 1);
 		scanf("%d", &value);
 		if (feof(stdin))
 			break;
@@ -52,14 +49,19 @@ int main(void)
 		{
 			printf("홀수번째 삭제 후 출력 >> ");
 			delodd(head, countnode(head));
+			 
 		}
 		else if(number==2)
 		{
 			printf("짝수번째 삭제 후 출력 >> ");
 			deleven(head, countnode(head));
 		}
-		else printf("Error, Please re-enter.");
-		printf("\n\n");
+		else
+		{
+			printf("Error, Please re-enter.");
+			printf("\n");
+		}
+		printf("\n"); 
 	}while(number != 1 && number != 2);
 	
 	return 0;
