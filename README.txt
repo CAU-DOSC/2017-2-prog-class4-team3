@@ -55,19 +55,6 @@ Function Descriptions
 
 Main Function
 
-- function.c를 사용하기 위한 연결 리스트의 head를 정의 및 동적 할당
-
-- 입력받은 자료 값을 appendnode()를 통해 연결 리스트에 추가, 이 과정에서 while() 반복문 이용하여
-  Ctrl-Z가 입력될 때까지 계속 입력 가능
-
-- countnode() 함수를 통해 자료들의 개수를 출력
-
-- printorder() 함수를 통해 연결 리스트의 노드들을 입력 순으로 출력
-
-- printreverse() 함수를 통해 연결 리스트의 노드들을 입력 역순으로 출력
-
-- printmid() 함수를 통해 연결 리스트 중간에 있는 노드의 저장 값을 출력
-
 - printvalue() 함수를 통해 연결 리스트에서 원하는 순서의 노드의 저장 값을 확인할 수 있고
   while() 반복문을 통해 Ctrl-Z가 입력될 때까지 계속 확인 가능
 
