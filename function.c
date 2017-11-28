@@ -77,7 +77,5 @@ void deleven(node *head, int count)
 		for (int i = 0; i < (count / 2); i++)
 			deletenode(head, i + 2);
 	}
-	else
-		;
 	printorder(head);
 }
