@@ -12,3 +12,4 @@ int gendata();
 void reverse(char *str, int x, int y);
 void reversal(char *str);
 void printvalue();
+int countdistance(int d, int n);
