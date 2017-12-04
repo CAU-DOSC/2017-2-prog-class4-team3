@@ -62,7 +62,7 @@ int countdistance(int d, int n)
 void trivial(char *str, int d, int n)
 {
      int k = 0;
-     char temp[20];
+     char temp = (char *)malloc(sizeof(char)*(n + 1));
 	
      for (k = 0 ; k < d ; k++)
           temp[k] = str[k];
@@ -70,6 +70,4 @@ void trivial(char *str, int d, int n)
           str[k-d] = str[k];
      for (k = 0 ; k < d ; k++)
           str[k + n - d] = temp[k];
-     for (k = 0 ; k < n ; k++)
-          printf("%c ", str[k]);
 }
