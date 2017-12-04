@@ -11,23 +11,31 @@ int main()
 		else
 		{
 			char *tstr = (char*)malloc(sizeof(char)*(n + 1));
+			
 			strcpy(tstr, str);
 			startTime = clock();
-			//trivial ÇÔ¼ö ³Ö±â
+			trivial(tstr, d, n);
 			endTime = clock();
 			time1 = (double)(endTime - startTime) / CLOCKS_PER_SEC;
+			
+			strcpy(tstr, str);
 			startTime = clock();
-			//juggle ÇÔ¼ö ³Ö±â
+			//juggle í•¨ìˆ˜ ë„£ê¸°
 			endTime = clock();
 			time2 = (double)(endTime - startTime) / CLOCKS_PER_SEC;
+			
+			strcpy(tstr, str);
 			startTime = clock();
-			//bw ÇÔ¼ö ³Ö±â
+			//bw í•¨ìˆ˜ ë„£ê¸°
 			endTime = clock();
 			time3 = (double)(endTime - startTime) / CLOCKS_PER_SEC;
+			
+			strcpy(tstr, str);
 			startTime = clock();
 			reversal(tstr);
 			endTime = clock();
 			time4 = (double)(endTime - startTime) / CLOCKS_PER_SEC;
+			
 			printvalue();
 			free(tstr);
 		}
