@@ -1,9 +1,9 @@
-void leftRotate(int arr[], int d, int n)
+void leftRotate(char arr[], int d, int n)
 {
-  int i, j, k, temp;
+  int i, j, k;
+  char temp;
   for (i = 0; i < gcd(d, n); i++)
   {
-    /* move i-th values of blocks */
     temp = arr[i];
     j = i;
     while(1)
