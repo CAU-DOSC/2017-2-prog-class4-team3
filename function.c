@@ -55,3 +55,18 @@ int countdistance(int d, int n)
 	}
 	return d;
 }
+
+void trivial(char *str, int d, int n)
+{
+     int k = 0;
+     char temp[20];
+	
+     for (k = 0 ; k < d ; k++)
+          temp[k] = str[k];
+     for (k = d ; k < n ; k++)
+          str[k-d] = str[k];
+     for (k = 0 ; k < d ; k++)
+          str[k + n - d] = temp[k];
+     for (k = 0 ; k < n ; k++)
+          printf("%c ", str[k]);
+}
