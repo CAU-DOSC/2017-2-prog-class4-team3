@@ -2,14 +2,17 @@
 
 int gendata()
 {
+	printf("Please enter the length of string >> ");
 	if (scanf("%d", &n) == EOF)
 		return 0;
 	else
 	{
+		printf("Please enter the rotating number >> ");
 		scanf("%d", &d);
+		printf("Please enter the data of string >> ");
 		str = (char *)malloc(sizeof(char)*(n + 1));
 		scanf("%s", str);
-		printf("String Entered : %s\n", str);
+		printf("String Entered >> %s\n", str);
 		return 1;
 	}
 }
