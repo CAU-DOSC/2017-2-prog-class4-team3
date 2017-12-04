@@ -9,8 +9,10 @@ char *str;
 double time1, time2, time3, time4;
 
 int gendata();
-void reverse(char *str, int x, int y);
+void strgen();
+void reverse(char *str, int start, int end);
 void reversal(char *str);
-void printvalue();
-int countdistance(int d, int n);
-void trivial(char *str, int d, int n);
+int countdistance(int d);
+void juggling(char *str);
+int gcd(int a, int b);
+void trivial(char *str);

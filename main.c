@@ -3,7 +3,7 @@
 int main()
 {
 	double startTime, endTime;
-	printf("STRLength	ROTATEdistance	T.trivial	T.juggle	T.bw	T.reverse\n");
+	printf("STRlength\tROTATEdistance\tT.trivial\tT.juggle\tT.bw\tT.reverse\n");
 	while (1)
 	{
 		if (gendata() == 0)
@@ -11,32 +11,24 @@ int main()
 		else
 		{
 			char *tstr = (char*)malloc(sizeof(char)*(n + 1));
-			
 			strcpy(tstr, str);
 			startTime = clock();
-			trivial(tstr, d, n);
+			trivial(tstr);
 			endTime = clock();
 			time1 = (double)(endTime - startTime) / CLOCKS_PER_SEC;
-			
-			strcpy(tstr, str);
 			startTime = clock();
-			//juggle 함수 넣기
+			juggling(tstr);
 			endTime = clock();
 			time2 = (double)(endTime - startTime) / CLOCKS_PER_SEC;
-			
-			strcpy(tstr, str);
 			startTime = clock();
-			//bw 함수 넣기
+			//bw �Լ� �ֱ�
 			endTime = clock();
 			time3 = (double)(endTime - startTime) / CLOCKS_PER_SEC;
-			
-			strcpy(tstr, str);
 			startTime = clock();
 			reversal(tstr);
 			endTime = clock();
 			time4 = (double)(endTime - startTime) / CLOCKS_PER_SEC;
-			
-			printvalue();
+			printf("%d\t\t%d\t\t%lf\t%lf\t%lf\t%lf\n", n, (n - d), time1, time2, time3, time4);
 			free(tstr);
 		}
 	}
