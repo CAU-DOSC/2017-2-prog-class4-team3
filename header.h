@@ -16,3 +16,5 @@ int countdistance(int d);
 void juggling(char *str);
 int gcd(int a, int b);
 void trivial(char *str);
+void swap(char *arr, int start, int end, int d);
+void blockswap(char *arr);

@@ -24,7 +24,7 @@ int main()
 			endTime = clock();
 			time2 = (double)(endTime - startTime) / CLOCKS_PER_SEC;
 			startTime = clock();
-			//bw 함수 넣기
+			blockswap(tstr);
 			endTime = clock();
 			time3 = (double)(endTime - startTime) / CLOCKS_PER_SEC;
 			startTime = clock();
