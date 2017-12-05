@@ -2,15 +2,18 @@
 
 int gendata()
 {
+	printf("Array length = ");
 	scanf("%d", &n);
 	if (n == EOF)
 		return 0;
 	else
 	{
-		str = (char *)malloc(sizeof(char)*(n + 1));
-		strgen();
+		printf("Rotate position = ");
 		scanf("%d", &d);
 		d = countdistance(-d);
+		str = (char *)malloc(sizeof(char)*(n + 1));
+		strgen();
+		
 		return 1;
 	}
 }
