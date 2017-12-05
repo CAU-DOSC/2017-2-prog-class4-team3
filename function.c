@@ -94,3 +94,36 @@ void juggling(char *str)
 		str[j] = temp;
 	}
 }
+void blockswap(char *arr)
+{
+	int i, j;
+	if (d == 0 || d == n)
+		return;
+	i = d;
+	j = n - d;
+	while (i != j)
+	{
+		if (i < j)
+		{
+			swap(arr, d - i, d + j - i, i);
+			j -= i;
+		}
+		else
+		{
+			swap(arr, d - i, d, j);
+			i -= j;
+		}
+	}
+	swap(arr, d - i, d, i);
+}
+
+void swap(char *arr, int start, int end, int d)
+{
+	char temp;
+	for (int i = 0; i<d; i++)
+	{
+		temp = *(arr + start + i);
+		*(arr + start + i) = *(arr + end + i);
+		*(arr + end + i) = temp;
+	}
+}
