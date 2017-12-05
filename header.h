@@ -4,7 +4,7 @@
 #include <string.h>
 #include <time.h>
 
-int n, d;
+int w, n, d;
 char *str;
 double time1, time2, time3, time4;
 
@@ -16,3 +16,5 @@ int countdistance(int d);
 void juggling(char *str);
 int gcd(int a, int b);
 void trivial(char *str);
+void swap(char *arr, int start, int end, int d);
+void blockswap(char *arr);
